@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" ng-app="SampleApp">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript HTML App</title>
+    <style>
+        .col {
+            width: 30px;
+        }
+    </style>
+</head>
+<body ng-controller="SampleCtrl as ctrl">
+    <h1>TypeScript HTML App</h1>
+
+    <div id="content">
+        <input type="text" name="txtA" ng-model="ctrl.model.A" class="col" />
+        +
+        <input type="text" name="txtA" ng-model="ctrl.model.B" class="col" />
+        =
+        <input type="text" name="txtResult" ng-model="ctrl.model.Result" class="col" /><br />
+        <button name="btnSum" ng-click="ctrl.DoSomething()">加起來</button>
+    </div>
+
+    <script src="Scripts/libs/jquery-2.2.3.min.js"></script>
+    <script src="Scripts/libs/angular.min.js"></script>
+    <script src="Scripts/libs/angular-filter.js"></script>
+
+    <!--<script src="Scripts/app/App.js"></script>-->
+    <script src="Scripts/app/Sample.Provider.js"></script>
+    <script src="Scripts/app/App2.js"></script>
+    <script src="Scripts/app/Sample.Directive.js"></script>
+    <script src="Scripts/app/Sample.Factory.js"></script>
+    <script src="Scripts/app/Sample.Service.js"></script>
+    <script src="Scripts/app/Sample.Controller.js"></script>
+
+    <script>
+
+        //var sampleSvc = function() {
+        //    this.Sum = function(a, b) {
+        //        return parseInt(a) + parseInt(b);
+        //    }
+        //};
+        //var sampleCtrl = function ($scope, sampleSvc) {
+        //    var scope = $scope;
+        //    scope.sampleSvc = sampleSvc;
+        //    scope.model = {
+        //        A: 0,
+        //        B: 0,
+        //        Result: 0
+        //    };
+            
+        //    scope.DoSomething = function () {
+        //        scope.model.Result = scope.sampleSvc.Sum(scope.model.A, scope.model.B);
+        //    }
+        //};
+        //sampleCtrl.$inject = ["$scope", "SampleSvc"];
+
+        //var modules = ["angular.filter"];
+        //angular.module("SampleApp", modules)
+        //    .service("SampleSvc", sampleSvc)
+        //    .controller("SampleCtrl", sampleCtrl);
+
+    </script>
+</body>
+</html>
